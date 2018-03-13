@@ -29,7 +29,7 @@ gulp.task('css-libs', ['less'], function () {
        .pipe(gulp.dest('public/stylesheets'))
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs'], function () {
+gulp.task('watch', ['css-libs'], function () {
     gulp.watch('app/less/**/*.less', ['less']);
     gulp.watch('views/*.pug', browserSync.reload);
 });
